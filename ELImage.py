@@ -25,7 +25,7 @@ class ELImg:
             currPixel = pixel[0] + pixel[1] + pixel[2]
             if currPixel > relevantPixelDelimiter:   
                 self.relevantPixelCount = self.relevantPixelCount + 1
-                self.intensityRating = self.intensityRating + 4*currPixel/3000
+                self.intensityRating = self.intensityRating + 5*currPixel/3000  - 5*relevantPixelDelimiter/3000
 
             if currPixel >= extremaDelimiter: 
                 self.extremaPixelCount = self.extremaPixelCount + 1
