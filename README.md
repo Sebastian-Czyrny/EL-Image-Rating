@@ -12,7 +12,7 @@ Image Evaluation:
 - intensity rating is a weighting of pixels above the relevantPixelDelimiter, with proportionate scaling 
 - in this sense, it does not matter how much of the image is luminescent, only how bright it its luminescent parts are
     - i.e., an EL image with only 1 solar cell can have a higher intensity-relevant ratio than an imge containing 3 solar cells
-- Weighting uses proportionate scaling with constant 4/3. Can play around with this constant, although increasing it would only serve to separate the intensity-relevant ratio of  
+- Weighting uses proportionate scaling with constant 5/3. Can play around with this constant, although increasing it would only serve to separate the intensity-relevant ratio of  
     dimmer images from brighter images by a greater amount
 
 To run the script (one image at a time):
