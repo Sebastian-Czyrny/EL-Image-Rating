@@ -111,7 +111,7 @@ class ELImg:
             for pixel in self.pixelList:
                 currPixel = pixel[0] + pixel[1] + pixel [2]
                 if currPixel > self.relevantPixelDelimiter:
-                    draw.point(currentPosition, fill=currPixel)
+                    draw.point(currentPosition, fill=int(currPixel/2))
 
                 # increment position by 1
                 if currentPosition[0] < self.width - 1:
