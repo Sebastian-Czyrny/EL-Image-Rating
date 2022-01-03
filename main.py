@@ -4,7 +4,7 @@ from PIL import Image
 import ELImage
 
 # Insert path to image
-path = "C:/Users/might/Documents/BSSR/Array Team/ELImages/Dora.jpg"
+path = "C:/Users/might/Documents/BSSR/Array Team/ELImages/Billy.jpg"
 img = Image.open(path)
 
 
@@ -31,8 +31,15 @@ def main():
     # RECOMMENDED: Find the required relevantPixelDelimiter 
     #   by first cropping out the part of image where there is unwanted bright pixels
     #   and then setting the relevantPixelDelimiter to be the maxPixel value in the cropped image
+
     ELimage = ELImage.ELImg(img,img.filename, relevantPixelDelimiter=100)
-    ELimage.ELprint()
+    ELimage.ELprint() 
+
+    # this part is to see what parts of the image are relevant pixels
+    # set weighting to True to see the intensity of the relevant pixel
+    fp = "C:/Users/might/Documents/BSSR/Array Team/ELImages/test2.jpg"
+    ELimage.ProjImage(fp, weighted=True)
+    
 
     ### show the information of only a section of the image ###
     # width, height = img.size
