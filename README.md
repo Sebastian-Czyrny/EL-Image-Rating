@@ -12,7 +12,7 @@ Image Evaluation:
 - intensity rating is a weighting of pixels above the relevantPixelDelimiter, with proportionate scaling 
 - in this sense, it does not matter how much of the image is luminescent, only how bright it its luminescent parts are
     - i.e., an EL image with only 1 solar cell can have a higher intensity-relevant ratio than an imge containing 3 solar cells
-- Weighting uses proportionate scaling with constant 5/3. Can play around with this constant, although increasing it would only serve to separate the intensity-relevant ratio of  
+- Weighting uses proportionate scaling with constant 5/3. Can play around with this constant, although increasing it would only serve to separate the intensity-relevant ratio of 
     dimmer images from brighter images by a greater amount
 
 To run the script (one image at a time):
@@ -29,5 +29,9 @@ Running multiple images at once:
 You may also want to crop out a part of the image and then compare it to the whole image to find out what the relevantPixelDelimiter value 
     for the whole image should be, where the relevantPixelDelimiter value will be the max pixel value that appears in the cropped image 
     (or just crop out the image manually before scanning it)
-
+    
+Image Projection
+- To see what pixels are being considered as relevant in the image, use ELImage.ELImg.ProjImage*(fp, weighted=True/False)
+- fp is the filepath to save the projected image to
+- set weighted to true to see the intensity of each pixelValue  
  
